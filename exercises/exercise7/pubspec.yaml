@@ -1,0 +1,29 @@
+name: exercise7
+description: "A new Flutter project."
+publish_to: 'none'  # Remove this line if you wish to publish to pub.dev
+version: 0.1.0
+
+environment:
+  sdk: '>=3.4.0-99.1.beta <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_maps_flutter: ^2.2.8
+  google_maps_flutter_web: ^0.5.6+2
+  http: ^1.2.1
+  json_serializable: ^6.7.1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  build_runner: ^2.4.9
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/locations.json
+
