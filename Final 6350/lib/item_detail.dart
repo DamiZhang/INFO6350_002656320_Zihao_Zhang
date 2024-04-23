@@ -1,7 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:info_6350_final_project/bean/bean_post.dart';
 import 'package:info_6350_final_project/config/config_document.dart';
+import 'package:info_6350_final_project/page_pic_previewer.dart';
 import 'package:info_6350_final_project/utils/utils_logger.dart';
 
 class ItemDetail extends StatefulWidget {
@@ -38,7 +41,7 @@ class _ItemDetailState extends State<ItemDetail> {
             }
             var doc = snapshot.data;
             LoggerUtils.i(doc);
-            if(doc==null){
+            if (doc == null) {
               return const Center(child: Text('no data'));
             }
             return SingleChildScrollView(
@@ -47,20 +50,29 @@ class _ItemDetailState extends State<ItemDetail> {
                 children: <Widget>[
                   SizedBox(
                     height: 300,
-                    child:  GridView.builder(
+                    child: GridView.builder(
                       shrinkWrap: true,
                       itemCount: doc.images.length,
-                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 3,
                         mainAxisSpacing: 4,
                         crossAxisSpacing: 4,
                       ),
                       itemBuilder: (context, index) {
-                        return Image.network(
-                          doc.images[index],
-                          height: 100,
-                          width: 100,
-                          fit: BoxFit.cover,
+                        return GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (ctx) => PicPreviewerPage(
+                                    imageUrl: doc.images[index])));
+                          },
+                          behavior: HitTestBehavior.opaque,
+                          child: Image.network(
+                            doc.images[index],
+                            height: 100,
+                            width: 100,
+                            fit: BoxFit.cover,
+                          ),
                         );
                       },
                     ),
