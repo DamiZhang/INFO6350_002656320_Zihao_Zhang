@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "871070502377",
+    "project_id": "grage-8aed2",
+    "storage_bucket": "grage-8aed2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871070502377:android:af793b5edbfdf386d6cf78",
+        "android_client_info": {
+          "package_name": "com.example.info_6350_final_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh-NH8hU5ZzZRmhAJW7UkxajCSw2tYSTQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871070502377:android:3b72dab3ec713e6bd6cf78",
+        "android_client_info": {
+          "package_name": "com.mycompany.todofall2023"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh-NH8hU5ZzZRmhAJW7UkxajCSw2tYSTQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
